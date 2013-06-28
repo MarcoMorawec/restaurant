@@ -31,6 +31,7 @@ class RestaurantsController < ApplicationController
 		else
 			flash[:notice] = "Something went terribly wrong and we couldn't update your entry"
 			render ('update')
+		end
 	end
 
 	def delete

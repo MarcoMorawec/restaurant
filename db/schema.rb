@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130628003428) do
+ActiveRecord::Schema.define(:version => 20130628113352) do
 
-  create_table "restaurant", :force => true do |t|
+  create_table "restaurants", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "street"

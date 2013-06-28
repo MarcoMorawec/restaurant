@@ -1,6 +1,6 @@
-class RestaurantTable < ActiveRecord::Migration
+class CreateRestaurants < ActiveRecord::Migration
   def change
-  	create_table :restaurant do |t|
+    create_table :restaurants do |t|
 	  	t.string "name"
 	  	t.text "description"
 	  	t.string "street"
@@ -11,8 +11,9 @@ class RestaurantTable < ActiveRecord::Migration
 	  	t.string "country"
 	  	t.integer "phonenumber"
 	  
-	  t.timestamps
-	end
-  end
+	  t.timestamps    	
 
+      t.timestamps
+    end
+  end
 end
