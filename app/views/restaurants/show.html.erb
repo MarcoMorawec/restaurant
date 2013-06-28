@@ -1,15 +1,20 @@
 <h1>Details for your Restaurant</h1>
 
+<%= link_to("<<Back to Restaurant Listing", {:action => 'index'}) %>
 	<h4>
-			<%= restaurant.name %>
-			<%= restaurant.description %>
-			<%= restaurant.street %>
-			<%= restaurant.streetnumber %>
-			<%= restaurant.city %>
-			<%= restaurant.zipcode %>
-			<%= restaurant.state %>
-			<%= restaurant.country %>						
-			<%= restaurant.phonenumber %>
-			<%= restaurant.created_at %>
-			<%= restaurant.updated_at %>			
+			<%= @restaurant.name %>
+			<%= @restaurant.description %>
+			<%= @restaurant.street %>
+			<%= @restaurant.streetnumber %>
+			<%= @restaurant.city %>
+			<%= @restaurant.zipcode %>
+			<%= @restaurant.state %>
+			<%= @restaurant.country %>						
+			<%= @restaurant.phonenumber %>
+			<%= @restaurant.created_at %>
+			<%= @restaurant.updated_at %>			
 	</h4>
+
+	<%= link_to("Edit Restaurant", {:action => 'edit', :id => @restaurant.id}) %>
+	<%= link_to("Delete Restaurant", {:action => 'destroy', :id => @restaurant.id}, :confirm => "Are you sure you want to delete?") %>
+

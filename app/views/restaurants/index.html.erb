@@ -13,5 +13,12 @@
 			<%= restaurant.country %>						
 			<%= restaurant.phonenumber %>
 		</h4>
+		<p>
+			<%= link_to("Show", {:action => 'show', :id => restaurant.id}) %>
+			<%= link_to("Edit", {:action => 'edit', :id => restaurant.id}) %>
+			<%= link_to("Delete Restaurant", {:action => 'destroy', :id => restaurant.id}, :confirm => "Are you sure you want to delete?") %>
+		</p>
+
+
 		<% end %>
 

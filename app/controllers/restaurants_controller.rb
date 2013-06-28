@@ -5,13 +5,18 @@ class RestaurantsController < ApplicationController
 	end
 
 
+	def new
+		@restaurant = Restaurant.new(params[:restaurant])		
+	end
+
 	def show
 		@restaurant = Restaurant.find(params[:id])
 	end
 
-	def new
-		@restaurant = Restaurant.new(params[:restaurant])		
+	def edit
+		@restaurant = Restaurant.find(params[:id])
 	end
+
 
 	def create
 		@restaurant = Restaurant.create(params[:restaurant])
@@ -25,19 +30,19 @@ class RestaurantsController < ApplicationController
 
 	def update
 		@restaurant = Restaurant.find(params[:id])
-		if @restaurant.update_attributes(:params[:restaurant])
+		if @restaurant.update_attributes(params[:restaurant])
 			flash[:notice] = "We updated your entry"
-			redirect_to ('index')
+			redirect_to(:action => 'index')
 		else
 			flash[:notice] = "Something went terribly wrong and we couldn't update your entry"
 			render ('update')
 		end
 	end
 
-	def delete
-		@restaurant = Restaurant.find(:params[:id]).destroy
+	def destroy
+		@restaurant = Restaurant.find(params[:id]).destroy
 		flash[:notice] = "You entry has been deleted"
-		redirect_to ('index')
+		redirect_to(:action => 'index')
 	end
 
 
