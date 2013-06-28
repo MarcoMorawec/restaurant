@@ -1,0 +1,11 @@
+<h2>Create a new restaurant</h2>
+
+<%= form_for(:restaurant, :url => {:action => 'create'}) do |f| %>
+
+	<%= f.label :name, "Restaurant Name" %>
+	<%= f.text_field(:name) %>
+
+	<%= submit_tag "Create Restaurant" %>
+
+<% end %>
+

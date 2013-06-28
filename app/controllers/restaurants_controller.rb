@@ -15,9 +15,9 @@ class RestaurantsController < ApplicationController
 
 	def create
 		@restaurant = Restaurant.create(params[:restaurant])
-			if restaurant.save
+			if @restaurant.save
 				flash[:notice] = "We saved your restaurant entry"
-				redirect_to ('index')
+				redirect_to(:action => 'index')
 			else
 				render ('new')
 			end
