@@ -1,0 +1,16 @@
+<h1>Welcome to the Restaurant Finder</h2>
+
+	<h4>
+		<% @restaurant.each do |restaurant| %>
+			<%= restaurant.description %>
+			<%= restaurant.street %>
+			<%= restaurant.streetnumber %>
+			<%= restaurant.city %>
+			<%= restaurant.zipcode %>
+			<%= restaurant.state %>
+			<%= restaurant.country %>						
+			<%= restaurant.phonenumber %>
+			<%= restaurant.created_at %>
+			<%= restaurant.updated_at %>			
+		<% end %>
+	</h4>

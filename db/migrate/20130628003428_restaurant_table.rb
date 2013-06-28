@@ -1,6 +1,6 @@
 class RestaurantTable < ActiveRecord::Migration
   def change
-  	create_table :sentences do |t|
+  	create_table :restaurant do |t|
 	  	t.string "name"
 	  	t.text "description"
 	  	t.string "street"

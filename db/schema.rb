@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130628003428) do
 
-  create_table "sentences", :force => true do |t|
+  create_table "restaurant", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "street"
